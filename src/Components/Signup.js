@@ -1,6 +1,5 @@
-// src/components/SignUp.js
 import React, { useState } from 'react';
-import './Signup.css';
+import './Signup.css'; // Import the CSS file
 
 const SignUp = () => {
   // Initialize state with default values
@@ -8,28 +7,31 @@ const SignUp = () => {
     username: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    termsAccepted: false, // State for terms and conditions checkbox
   });
 
-  const [errors, setErrors] = useState({});
-  
+  const [errors, setErrors] = useState({}); // State for form errors
+
   // Handle changes in input fields and checkbox
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value,
     });
   };
 
+  // Validate form data
   const validate = () => {
     let tempErrors = {};
-    if (!formData.username) tempErrors.username = "Username is required";
-    if (!formData.email) tempErrors.email = "Email is required";
-    if (!/\S+@\S+\.\S+/.test(formData.email)) tempErrors.email = "Email is not valid";
-    if (!formData.password) tempErrors.password = "Password is required";
-    if (formData.password.length < 6) tempErrors.password = "Password must be at least 6 characters";
-    if (formData.password !== formData.confirmPassword) tempErrors.confirmPassword = "Passwords do not match";
+    if (!formData.username) tempErrors.username = 'Username is required';
+    if (!formData.email) tempErrors.email = 'Email is required';
+    if (!/\S+@\S+\.\S+/.test(formData.email)) tempErrors.email = 'Email is not valid';
+    if (!formData.password) tempErrors.password = 'Password is required';
+    if (formData.password.length < 6) tempErrors.password = 'Password must be at least 6 characters';
+    if (formData.password !== formData.confirmPassword) tempErrors.confirmPassword = 'Passwords do not match';
+    if (!formData.termsAccepted) tempErrors.termsAccepted = 'You must accept the terms and conditions';
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
@@ -39,7 +41,7 @@ const SignUp = () => {
     e.preventDefault();
     if (validate()) {
       // Submit form or handle successful validation
-      console.log("Form submitted successfully", formData);
+      console.log('Form submitted successfully', formData);
     }
   };
 
@@ -47,6 +49,7 @@ const SignUp = () => {
     <div className="sign-up-container">
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
+        {/* Username input field */}
         <div>
           <label>Username</label>
           <input
@@ -57,6 +60,7 @@ const SignUp = () => {
           />
           {errors.username && <p className="error">{errors.username}</p>}
         </div>
+        {/* Email input field */}
         <div>
           <label>Email</label>
           <input
@@ -67,6 +71,7 @@ const SignUp = () => {
           />
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
+        {/* Password input field */}
         <div>
           <label>Password</label>
           <input
@@ -77,6 +82,7 @@ const SignUp = () => {
           />
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
+        {/* Confirm Password input field */}
         <div>
           <label>Confirm Password</label>
           <input
@@ -87,14 +93,24 @@ const SignUp = () => {
           />
           {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
         </div>
-        
-        <button type="submit">Sign Up</button>   
+        {/* Terms and Conditions checkbox */}
+        <div className="checkbox-container">
+          <input
+            type="checkbox"
+            name="termsAccepted"
+            checked={formData.termsAccepted}
+            onChange={handleChange}
+          />
+          <label>I accept the terms and conditions</label>
+          {errors.termsAccepted && <p className="error">{errors.termsAccepted}</p>}
+        </div>
+        {/* Submit button */}
+        <button type="submit">Sign Up</button>
 
         {/* Login statement */}
-      <div className="login-redirect">
-        <p>Already have an account? <a href="/login">Login here</a></p>
-      </div>
-      
+        <div className="login-redirect">
+          <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
       </form>
     </div>
   );
