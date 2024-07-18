@@ -3,8 +3,6 @@ import './Page1.css'; //import css page
 import logo from './Logo2.png';// path of the logo or image
 import Page2 from './Page2';
 
-
-
 function Page1() {
   // const Page1 = () => {
     const [showPage2, setShowPage2] = useState(false); //dynamically rendering Page2.js based on a state or a condition

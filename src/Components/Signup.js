@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Signup.css';
 
 const SignUp = () => {
+  // Initialize state with default values
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -11,7 +12,8 @@ const SignUp = () => {
   });
 
   const [errors, setErrors] = useState({});
-
+  
+  // Handle changes in input fields and checkbox
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -32,6 +34,7 @@ const SignUp = () => {
     return Object.keys(tempErrors).length === 0;
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
@@ -84,7 +87,14 @@ const SignUp = () => {
           />
           {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
         </div>
-        <button type="submit">Sign Up</button>
+        
+        <button type="submit">Sign Up</button>   
+
+        {/* Login statement */}
+      <div className="login-redirect">
+        <p>Already have an account? <a href="/login">Login here</a></p>
+      </div>
+      
       </form>
     </div>
   );
