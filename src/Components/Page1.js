@@ -16,7 +16,7 @@ function Page1() {
     <div>
     {!showPage2 ? (
 
-    <div className="container">
+    <div className="container1">
       <img src={logo} alt="Logo" className="logo" />
       <h4>Who are you..?</h4>
       <div className="button-container">

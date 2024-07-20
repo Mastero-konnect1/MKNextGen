@@ -1,6 +1,14 @@
-.container {
+.container2 {
     text-align: center;
     padding-top: 200px;
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-top: 100px;
 }
 
 .logo {
@@ -9,13 +17,14 @@
     margin-bottom: 5px;
 }
 
-h4{
+h4 {
     font: optional;
     margin-bottom: 30px;
 }
 
 .button-container {
-    justify-content: center;}
+    justify-content: center;
+}
 
 .btn1 {
     padding: 10px 60px;
@@ -28,9 +37,8 @@ h4{
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
 }
-
-.btn {
-    padding: 10px 53px;
+.btn2 {
+    padding: 10px 54px;
     font-size: 16px;
     color: #fff;
     background-color: #007bff;
@@ -40,10 +48,26 @@ h4{
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
 }
+    
 
-.btn:hover {
+.btn2:hover, .btn1:hover {
     background-color: #0056b3;
 }
-.btn1:hover {
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
     background-color: #0056b3;
 }
