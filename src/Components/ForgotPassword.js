@@ -7,6 +7,7 @@ const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [passwordMatch, setPasswordMatch] = useState(true);
+  const [passwordValid, setPasswordValid] = useState(true);
 
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -17,15 +18,32 @@ const ForgotPassword = () => {
     setShowLogin(true);
   };
 
+  const validatePassword = (password) => {
+    // Regular expression to check for at least one of the special characters
+    const specialCharRegex = /[!@#$%&]/;
+    return specialCharRegex.test(password);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newPassword === confirmPassword) {
-      // Handle the change password logic here
-      console.log('New Password:', newPassword);
-      console.log('Passwords match');
+      if (validatePassword(newPassword)) {
+        // Handle the change password logic here
+        console.log('New Password:', newPassword);
+        console.log('Passwords match and are valid');
+        // Proceed with password change logic
+      } else {
+        setPasswordValid(false);
+      }
     } else {
       setPasswordMatch(false);
     }
+  };
+
+  const handleNewPasswordChange = (e) => {
+    const password = e.target.value;
+    setNewPassword(password);
+    setPasswordValid(validatePassword(password));
   };
 
   const toggleNewPasswordVisibility = () => {
@@ -51,7 +69,7 @@ const ForgotPassword = () => {
                 <input
                   type={showNewPassword ? 'text' : 'password'}
                   value={newPassword}
-                  onChange={(e) => setNewPassword(e.target.value)}
+                  onChange={handleNewPasswordChange}
                   required
                 />
                 <span
@@ -61,8 +79,9 @@ const ForgotPassword = () => {
                   {showNewPassword ? '👁️' : '👁️‍🗨️'}
                 </span>
               </div>
+              {!passwordValid && <p className="error-text">Password must include at least one of the following characters: !, @, #, $, %, &</p>}
             </div>
-            <div className="form-group1">
+            <div className="form-group">
               <label>Confirm Password:</label>
               <div className="password-input-container">
                 <input

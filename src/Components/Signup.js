@@ -20,11 +20,9 @@ const Signup = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [showPage2, setShowPage2] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-
   
   // State for warning message
   const [warning, setWarning] = useState('');
-
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -34,14 +32,28 @@ const Signup = () => {
     });
   };
 
+  const validatePassword = () => {
+    const specialCharRegex = /[!@#$^&]/;
+    if (!formData.password) {
+      setWarning('Password is required');
+      return false;
+    } else if (formData.password.length < 6 || !specialCharRegex.test(formData.password)) {
+      setWarning('Password must be at least 6 characters and should contain one of these: !, @, #, $, ^, &');
+      return false;
+    }
+    setWarning('');
+    return true;
+  };
+
   const validate = () => {
     let tempErrors = {};
     if (!formData.username) tempErrors.username = 'Username is required';
     if (!formData.email) tempErrors.email = 'Email is required';
     if (!/\S+@\S+\.\S+/.test(formData.email)) tempErrors.email = 'Email is not valid';
-    if (!formData.password) tempErrors.password = 'Password is required';
-    if (formData.password.length < 6) tempErrors.password = 'Password must be at least 6 characters';
-    if (formData.password !== formData.confirmPassword) tempErrors.confirmPassword = 'Passwords do not match';
+    if (!validatePassword()) return false;
+    if (formData.password !== formData.confirmPassword) {
+      tempErrors.confirmPassword = 'Passwords do not match';
+    }
     if (!formData.termsAccepted) tempErrors.termsAccepted = 'You must accept the terms and conditions';
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -60,24 +72,6 @@ const Signup = () => {
 
   const handleLoginRedirect = () => {
     setShowLogin('/login'); // Navigate to the Login page
-  };
-
-  const handlePasswordFocus = () => {
-    if (formData.password.length < 6) {
-      setWarning('Password must be at least 6 characters long.');
-    } else {
-      setWarning('');
-    }
-  };
-
-  const handleConfirmPasswordFocus = () => {
-    if (!formData.password) {
-      setWarning('Please enter a password before confirming.');
-    } else if (formData.password.length < 6) {
-      setWarning('Password must be at least 6 characters long.');
-    } else {
-      setWarning('');
-    }
   };
 
   return (
@@ -120,7 +114,7 @@ const Signup = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                onFocus={handlePasswordFocus}
+                onBlur={validatePassword} // Validate password on blur
               />
               <span
                 className={`eye-icon ${showPassword ? 'show' : 'hide'}`}
@@ -128,8 +122,8 @@ const Signup = () => {
               >
                 {showPassword ? '👁️' : '👁️‍🗨️'}
               </span>
-              {errors.password && <p className="error">{errors.password}</p>}
               {warning && <p className="warning">{warning}</p>}
+              {errors.password && <p className="error">{errors.password}</p>}
             </div>
             {/* Confirm Password input field */}
             <div className="password-input-container">
@@ -139,7 +133,6 @@ const Signup = () => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                onFocus={handleConfirmPasswordFocus}
               />
               <span
                 className={`eye-icon ${showConfirmPassword ? 'show' : 'hide'}`}
