@@ -157,7 +157,7 @@ const Signup = () => {
             <button type="submit">Sign Up</button>
             {/* Login statement */}
             <div className="login-redirect">
-              <p>Already have an account? <a href="/#" onClick={handleLoginRedirect}>Login here</a></p>
+              <p>Already have an account? <a href="#home" onClick={handleLoginRedirect}>Login here</a></p>
             </div>
           </form>
         </div>
