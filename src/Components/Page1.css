@@ -1,32 +1,52 @@
-.container1 {
+.container-p1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    /* padding-top: 200px; */
-    max-width: 300px;
+    max-width: 1500px;
+    height: auto;
     margin: 50px auto;
     padding: 30px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
-.logo {
+.image-container-p1 {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.pic1 {
+    width: 700px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.content {
+    flex: 2;
+    margin-right: 100px;
+}
+
+.logo-p1 {
+    position: absolute;
+    top: 30px;
+    left: 40px;
     width: 70px;
     height: auto;
-    margin-bottom: 5px;
 }
 
-h4{
-    font: optional;
+h1 {
     margin-bottom: 30px;
+    color: black;
 }
 
 .button-container {
-    justify-content: center;}
+    justify-content: center;
+}
 
 .btn {
-    padding: 10px 40px;
+    padding: 10px 60px;
     font-size: 16px;
     color: #fff;
     background-color: #007bff;
@@ -35,8 +55,47 @@ h4{
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+/* Media queries for mobile view */
+@media (max-width: 768px) {
+    .container-p1 {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .image-container-p1 {
+        margin: 0px 0 0px 20px;
+    }
+
+    .pic1 {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .content {
+        margin-left: 90px;
+        width: 100%;
+    }
+
+    .logo-p1 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 40px; /* Adjust the width to be smaller */
+        height: auto;
+    }
+
+    .btn {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
 }

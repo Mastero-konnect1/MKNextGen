@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Page2.css'; // Import CSS page
 import logo from './Logo2.png'; // Path of the logo or image
+import connect from './connect.jpg'; // Import connect.png
 import SignUp from './Signup';
 import Login from './Login'; // Import the Login component
 import Page1 from './Page1';
@@ -21,8 +22,6 @@ function Page2() {
   };
 
   const handleBack = () => {
-    // setShowSignup(false);
-    // setShowLogin(false);
     setShowPage1(true);
   };
 
@@ -32,13 +31,18 @@ function Page2() {
         &#8592; Back
       </button>
       {!showSignup && !showLogin && !showPage1 ? (
-        <div className="container2">
-          <img src={logo} alt="Logo" className="logo" />
-          <h4>Connect with Mastero Konnect...</h4>
-          <div className="button-container">
-            <button className="btn1" onClick={navigateToLogin}>Login</button>
-            <br />
-            <button className="btn2" onClick={navigateToSignup}>Sign Up</button>
+        <div className="container-p2">
+          <div className="image-container-p2">
+            <img src={connect} alt="Connect" className="connect" />
+          </div>
+          <div className="content">
+            <img src={logo} alt="Logo" className="logo" />
+            <h2>Connect with Mastero Konnect...</h2>
+            <div className="button-container">
+              <button className="btn1" onClick={navigateToLogin}>Login</button>
+              <br />
+              <button className="btn2" onClick={navigateToSignup}>Sign Up</button>
+            </div>
           </div>
         </div>
       ) : showSignup ? (

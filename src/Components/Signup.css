@@ -1,42 +1,63 @@
-/* Style for the form container */
-.sign-up-container {
-  margin: auto;
-  margin-top: 70px;
-  background: white;
-  padding: 20px;
+.container-s {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  height: auto;
+  margin: 0px auto;
+  padding: 30px;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* background-color: white; */
+  /* margin-top: 100px; */
 }
 
-/* Style for the form title */
+.image-container-s {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.signup-image {
+  width: 500px;
+  height: auto;
+  margin-left: 150px;
+}
+
+.sign-up-container {
+  flex: 2;
+  margin-right: 150px;
+  background: white;
+  padding: 30px 50px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  width: 200px;
+}
+
 .sign-up-container h2 {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
-/* Style for form elements */
 .sign-up-container form div {
   margin-bottom: 15px;
 }
 
-/* Style for labels */
 .sign-up-container label {
   display: block;
   margin-bottom: 5px;
 }
 
-/* Style for input fields */
 .sign-up-container input[type="text"],
 .sign-up-container input[type="email"],
 .sign-up-container input[type="password"] {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
-  border: 1px solid #ddd; /* Optional: adds a border for better visibility */
-  border-radius: 4px; /* Optional: adds rounded corners to the input */
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-/* Style for checkbox container */
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -46,14 +67,12 @@
   margin-right: 10px;
 }
 
-/* Style for error messages */
 .sign-up-container .error {
   color: red;
   font-size: 12px;
   margin-top: 5px;
 }
 
-/* Style for the submit button */
 .sign-up-container button {
   width: 100%;
   padding: 10px;
@@ -62,13 +81,14 @@
   border: none;
   border-radius: 40px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .sign-up-container button:hover {
   background-color: #0056b3;
 }
 
-/* Style for the login redirect */
 .login-redirect {
   margin-top: 20px;
   text-align: center;
@@ -87,35 +107,46 @@
   color: #0056b3;
 }
 
-/* Style for the password input container */
 .password-input-container {
   position: relative;
-  margin-bottom: 15px; /* Ensure space below input fields */
+  margin-bottom: 15px;
 }
 
-/* Style for password inputs */
 .password-input-container input {
   width: 100%;
-  padding-right: 40px; /* Adjust padding to fit the eye icon */
+  padding-right: 40px;
 }
 
-/* Style for the eye icon */
-.eye-icon {
+.eye-icon-s {
   position: absolute;
   right: 10px;
   margin-top: 5px;
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
   cursor: pointer;
-  font-size: 16px; /* Adjust font size if needed */
-  color: #333; /* Optional: color for better visibility */
+  font-size: 16px;
+  color: #333;
 }
 
-/* Style for the warning message */
 .warning {
   color: red;
   font-size: 12px;
   margin-top: 5px;
-  margin-bottom: 0; /* Ensure there's no extra space below the warning message */
+  margin-bottom: 0;
 }
 
+.back-button {
+  position: absolute;
+  top: 580px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

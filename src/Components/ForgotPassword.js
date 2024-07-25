@@ -1,6 +1,6 @@
-// src/Components/ForgotPassword.js
 import React, { useState } from 'react';
 import './ForgotPassword.css';
+import forgotImage from './forgot.jpg'; // Import forgot.jpg
 import Login from './Login';
 
 const ForgotPassword = () => {
@@ -19,7 +19,6 @@ const ForgotPassword = () => {
   };
 
   const validatePassword = (password) => {
-    // Regular expression to check for at least one of the special characters
     const specialCharRegex = /[!@#$%&]/;
     return specialCharRegex.test(password);
   };
@@ -28,10 +27,8 @@ const ForgotPassword = () => {
     e.preventDefault();
     if (newPassword === confirmPassword) {
       if (validatePassword(newPassword)) {
-        // Handle the change password logic here
         console.log('New Password:', newPassword);
         console.log('Passwords match and are valid');
-        // Proceed with password change logic
       } else {
         setPasswordValid(false);
       }
@@ -60,47 +57,52 @@ const ForgotPassword = () => {
         &#8592; Back
       </button>
       {!showLogin ? (
-        <div className="forgot-password-container">
-          <h2>Forgot Password</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label>New Password:</label>
-              <div className="password-input-container">
-                <input
-                  type={showNewPassword ? 'text' : 'password'}
-                  value={newPassword}
-                  onChange={handleNewPasswordChange}
-                  required
-                />
-                <span
-                  className={`eye-icon ${showNewPassword ? 'show' : 'hide'}`}
-                  onClick={toggleNewPasswordVisibility}
-                >
-                  {showNewPassword ? '👁️' : '👁️‍🗨️'}
-                </span>
+        <div className="container-f">
+          <div className="image-container-f">
+            <img src={forgotImage} alt="Forgot Password" className="forgot-image-f" />
+          </div>
+          <div className="forgot-password-container-f">
+            <h2>Forgot Password</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>New Password:</label>
+                <div className="password-input-container">
+                  <input
+                    type={showNewPassword ? 'text' : 'password'}
+                    value={newPassword}
+                    onChange={handleNewPasswordChange}
+                    required
+                  />
+                  <span
+                    className={`eye-icon-f ${showNewPassword ? 'show' : 'hide'}`}
+                    onClick={toggleNewPasswordVisibility}
+                  >
+                    {showNewPassword ? '👁️' : '👁️‍🗨️'}
+                  </span>
+                </div>
+                {!passwordValid && <p className="error-text">Password must include at least one of the following characters: !, @, #, $, %, &</p>}
               </div>
-              {!passwordValid && <p className="error-text">Password must include at least one of the following characters: !, @, #, $, %, &</p>}
-            </div>
-            <div className="form-group">
-              <label>Confirm Password:</label>
-              <div className="password-input-container">
-                <input
-                  type={showConfirmPassword ? 'text' : 'password'}
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
-                />
-                <span
-                  className={`eye-icon ${showConfirmPassword ? 'show' : 'hide'}`}
-                  onClick={toggleConfirmPasswordVisibility}
-                >
-                  {showConfirmPassword ? '👁️' : '👁️‍🗨️'}
-                </span>
+              <div className="form-group">
+                <label>Confirm Password:</label>
+                <div className="password-input-container">
+                  <input
+                    type={showConfirmPassword ? 'text' : 'password'}
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                  />
+                  <span
+                    className={`eye-icon-f ${showConfirmPassword ? 'show' : 'hide'}`}
+                    onClick={toggleConfirmPasswordVisibility}
+                  >
+                    {showConfirmPassword ? '👁️' : '👁️‍🗨️'}
+                  </span>
+                </div>
+                {!passwordMatch && <p className="error-text">Passwords do not match</p>}
               </div>
-              {!passwordMatch && <p className="error-text">Passwords do not match</p>}
-            </div>
-            <button type="submit" className='btn-change'>Change Password</button>
-          </form>
+              <button type="submit" className="btn-change-f">Change Password</button>
+            </form>
+          </div>
         </div>
       ) : (
         <Login />
