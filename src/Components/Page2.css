@@ -100,9 +100,9 @@ h2 {
         /* margin-top: 50px; */
     }
 
-    .image-container-p2 {
+    /* .image-container-p2 {
         margin: 20px 0;
-    }
+    } */
 
     .connect {
         width: 100%;
@@ -121,13 +121,9 @@ h2 {
         margin-bottom: 5px;
     } */
 
-   
-
-    
-
     .back-button {
         position: static;
         margin: 20px 0;
-        margin-top: 180px;
+        margin-top: 120px;
     }
 }

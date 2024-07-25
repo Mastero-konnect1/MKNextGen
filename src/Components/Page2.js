@@ -27,16 +27,18 @@ function Page2() {
 
   return (
     <div>
-      <button className="back-button" onClick={handleBack}>
-        &#8592; Back
-      </button>
+      <div className="header">
+        <button className="back-button" onClick={handleBack}>
+          &#8592; Back
+        </button>
+        {/* <img src={logo} alt="Logo" className="logo" /> */}
+      </div>
       {!showSignup && !showLogin && !showPage1 ? (
         <div className="container-p2">
           <div className="image-container-p2">
             <img src={connect} alt="Connect" className="connect" />
           </div>
           <div className="content">
-            {/* <img src={logo} alt="Logo" className="logo" /> */}
             <h2>Connect with Mastero Konnect...</h2>
             <div className="button-container">
               <button className="btn1" onClick={navigateToLogin}>Login</button>
