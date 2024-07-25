@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Page2.css'; // Import CSS page
-import logo from './Logo2.png'; // Path of the logo or image
+// import logo from './Logo2.png'; // Path of the logo or image
 import connect from './connect.jpg'; // Import connect.png
 import SignUp from './Signup';
 import Login from './Login'; // Import the Login component
@@ -36,7 +36,7 @@ function Page2() {
             <img src={connect} alt="Connect" className="connect" />
           </div>
           <div className="content">
-            <img src={logo} alt="Logo" className="logo" />
+            {/* <img src={logo} alt="Logo" className="logo" /> */}
             <h2>Connect with Mastero Konnect...</h2>
             <div className="button-container">
               <button className="btn1" onClick={navigateToLogin}>Login</button>

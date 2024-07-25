@@ -5,11 +5,9 @@
     text-align: center;
     max-width: 1500px;
     height: 500px;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 30px;
-    /* border: 1px solid #ccc; */
     border-radius: 8px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     background-color: white;
     margin-top: 30px;
 }
@@ -38,7 +36,6 @@
 }
 
 h2 {
-    font: optional;
     margin-bottom: 30px;
 }
 
@@ -92,4 +89,46 @@ h2 {
 
 .back-button:hover {
     background-color: #0056b3;
+}
+
+/* Media queries for mobile view */
+@media (max-width: 768px) {
+    .container-p2 {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        /* margin-top: 50px; */
+    }
+
+    .image-container-p2 {
+        margin: 20px 0;
+    }
+
+    .connect {
+        width: 70%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .content {
+        margin: 0;
+        width: 100%;
+    }
+
+    /* .logo {
+        width: 40px;
+        height: auto;
+        margin-bottom: 5px;
+    } */
+
+    .btn1, .btn2 {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+
+    .back-button {
+        position: static;
+        margin: 20px 0;
+        margin-top: 70px;
+    }
 }

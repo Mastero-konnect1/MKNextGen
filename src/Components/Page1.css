@@ -18,6 +18,7 @@
 }
 
 .pic1 {
+    /* margin-top: 30px; */
     width: 700px;
     height: auto;
     margin-left: 100px;
@@ -90,7 +91,7 @@ h1 {
         position: absolute;
         top: 20px;
         left: 20px;
-        width: 40px; /* Adjust the width to be smaller */
+        width: 30px; /* Adjust the width to be smaller */
         height: auto;
     }
 
