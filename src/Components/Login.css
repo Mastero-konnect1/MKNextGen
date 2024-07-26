@@ -110,16 +110,18 @@
   .container-l {
     flex-direction: column;
     padding: 10px;
+    margin: 20px auto;
   }
 
   .image-container-l {
     margin: 0;
     text-align: center;
+    flex: 0;
   }
 
   .login-image {
-    margin: 20px auto;
-    width: 100%;
+    margin: 0;
+    width: 80%;
     max-width: 300px;
   }
 
@@ -127,6 +129,6 @@
     margin: 0 auto;
     width: 80%;
     max-width: 400px;
-    /* padding: 20px; */
+    padding: 10px;
   }
 }

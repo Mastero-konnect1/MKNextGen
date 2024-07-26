@@ -66,7 +66,6 @@ h2 {
     border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    /* margin-bottom: 10px; */
 }
 
 .btn2:hover, .btn1:hover {
@@ -83,12 +82,12 @@ h2 {
     font-weight: bold;
     margin: 0;
 }
-  
+
 .back-btn-p2 a {
     color: #007bff;
     text-decoration: none;
 }
-  
+
 .back-btn-p2 a:hover {
     color: #0056b3;
 }
@@ -97,7 +96,7 @@ h2 {
 @media (max-width: 768px) {
     .container-p2 {
         flex-direction: column;
-        /* padding: 10px; */
+        padding: 10px;
     }
 
     .image-container-p2 {
@@ -106,7 +105,7 @@ h2 {
     }
 
     .connect {
-        margin: 20px auto;
+        margin: 0 auto 20px;
         width: 100%;
         max-width: 300px;
     }
@@ -117,9 +116,8 @@ h2 {
         width: 100%;
     }
 
-    .back-btn-p2{
+    .back-btn-p2 {
         text-align: left;
         margin-left: 110px;
     }
-
 }

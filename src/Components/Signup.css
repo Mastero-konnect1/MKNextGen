@@ -131,7 +131,6 @@
 
 .back-btn-s {
   text-align: left;
-  /* margin-top: 20px; */
 }
 
 .back-btn-s p {
@@ -154,15 +153,17 @@
   .container-s {
     flex-direction: column;
     padding: 10px;
+    margin: 20px auto;
   }
 
   .image-container-s {
     margin: 0;
     text-align: center;
+    flex: 0;
   }
 
   .signup-image {
-    margin: 20px 20px;
+    margin: 0;
     width: 100%;
     max-width: 300px;
   }
@@ -171,7 +172,6 @@
     margin: 0 auto;
     width: 80%;
     max-width: 400px;
-    padding: 20px;
+    padding: 3px;
   }
-
 }
