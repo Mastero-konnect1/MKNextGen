@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // Uses useState hook to manage showPage2 state
 import './Page1.css'; // Import CSS page
-import logo from './Logo2.png'; // Path of the logo or image
-import pic1 from './Pic1.png'; // Import Pic1.png
+import logo from './Images/Logo2.png'; // Path of the logo or image
+import pic1 from './Images/Pic1.png'; // Import Pic1.png
 import Page2 from './Page2';
 
 function Page1() {

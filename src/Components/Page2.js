@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Page2.css'; // Import CSS page
 // import logo from './Logo2.png'; // Path of the logo or image
-import connect from './connect.jpg'; // Import connect.png
+import connect from './Images/connect.jpg'; // Import connect.png
 import SignUp from './Signup';
 import Login from './Login'; // Import the Login component
 import Page1 from './Page1';

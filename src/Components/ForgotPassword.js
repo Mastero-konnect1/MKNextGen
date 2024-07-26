@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ForgotPassword.css';
-import forgotImage from './forgot.jpg'; // Import forgot.jpg
+import forgotImage from './Images/forgot.jpg'; // Import forgot.jpg
 import Login from './Login';
 
 const ForgotPassword = () => {
