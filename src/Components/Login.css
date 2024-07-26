@@ -105,6 +105,20 @@
   cursor: pointer;
 }
 
+/* .warning {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+} */
+
+.warning {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+
 /* Mobile view adjustments */
 @media (max-width: 768px) {
   .container-l {

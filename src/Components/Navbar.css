@@ -1,0 +1,76 @@
+.navbar-n {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img-n {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none; /* Removes the border */
+    border-radius: 50px;
+    width: 300px; /* Adjust width as needed */
+    outline: none;
+    margin-right: 20px; /* Removes the focus outline */
+}
+
+/* Adjust styles for the profile section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between elements */
+}
+
+.navbar-right .profile {
+    display: flex;
+    align-items: center;
+    background-color: white; /* Background color to make it stand out */
+    border-radius: 50%; /* Rounded corners if you want */
+    padding: 10px; /* Padding to give some space */
+    width: 40px; /* Width for the profile section */
+    height: 40px; /* Height for the profile section */
+    text-align: center; /* Center text or any content you might add */
+    color: purple; /* Text color if you want to display something */
+    text-decoration: none; /* Remove underline if using an anchor tag */
+    margin-right: 20px; /* Space between profile and chat link */
+}
+
+.chat-link {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px; /* Space between profile and chat link */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.chat-link:hover {
+    color: rgb(182, 165, 165); /* Text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-left, .navbar-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+}
