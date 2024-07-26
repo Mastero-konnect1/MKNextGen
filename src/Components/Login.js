@@ -31,10 +31,6 @@ const Login = () => {
 
   return (
     <div>
-      <button className="back-button" onClick={handleBack}>
-        &#8592; Back
-      </button>
-
       {!showPage2 && !showFP ? (
         <div className="container-l">
           <div className="image-container-l">
@@ -75,6 +71,7 @@ const Login = () => {
               <a href="#home" onClick={handleForgotPassword}>
                 Forgot Password?
               </a>
+              <p><a href="#home" onClick={handleBack}>&#8592;</a></p>
             </div>
           </div>
         </div>

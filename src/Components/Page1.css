@@ -5,11 +5,8 @@
     text-align: center;
     max-width: 1500px;
     height: auto;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 8px;
     background-color: white;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .image-container-p1 {
@@ -18,7 +15,7 @@
 }
 
 .pic1 {
-    /* margin-top: 30px; */
+    margin-top: 60px;
     width: 700px;
     height: auto;
     margin-left: 100px;
@@ -31,8 +28,8 @@
 
 .logo-p1 {
     position: absolute;
-    top: 30px;
-    left: 40px;
+    top: 20px;
+    left: 30px;
     width: 70px;
     height: auto;
 }
@@ -56,7 +53,6 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
-    font-size: 16px;
     font-weight: bold;
 }
 
@@ -64,39 +60,32 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Media queries for mobile view */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .container-p1 {
         flex-direction: column;
-        padding: 20px;
-        margin-top: 50px;
+        /* margin: 10px; */
     }
 
     .image-container-p1 {
-        margin: 0px 0 0px 20px;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
     }
 
     .pic1 {
+        margin: 20px auto;
         width: 100%;
-        height: auto;
-        margin: 0;
+        max-width: 300px;
     }
 
     .content {
-        margin-left: 90px;
-        width: 100%;
+        margin-right: 0;
+        padding: 10px;
     }
 
     .logo-p1 {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 30px; /* Adjust the width to be smaller */
+        width: 30px;
         height: auto;
-    }
-
-    .btn {
-        padding: 10px 40px;
-        font-size: 14px;
     }
 }

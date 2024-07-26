@@ -72,10 +72,6 @@ const Signup = () => {
 
   return (
     <div>
-      <button className="back-button" onClick={handleBack}>
-        &#8592; Back
-      </button>
-
       {!showPage2 && !showLogin ? (
         <div className="container-s">
           <div className="image-container-s">
@@ -153,6 +149,9 @@ const Signup = () => {
                 <p>Already have an account? <a href="#home" onClick={handleLoginRedirect}>Login here</a></p>
               </div>
             </form>
+            <div className='back-btn-s'>
+            <p><a href="#home" onClick={handleBack}>&#8592;</a></p>
+            </div>
           </div>
         </div>
       ) : showPage2 ? (

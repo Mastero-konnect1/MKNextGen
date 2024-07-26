@@ -53,9 +53,6 @@ const ForgotPassword = () => {
 
   return (
     <div>
-      <button className="back-button" onClick={navigateLogin}>
-        &#8592; Back
-      </button>
       {!showLogin ? (
         <div className="container-f">
           <div className="image-container-f">
@@ -102,6 +99,9 @@ const ForgotPassword = () => {
               </div>
               <button type="submit" className="btn-change-f">Change Password</button>
             </form>
+            <div className='back-btn-f'> 
+              <p><a href="#home" onClick={navigateLogin}>&#8592;</a></p>
+            </div>
           </div>
         </div>
       ) : (

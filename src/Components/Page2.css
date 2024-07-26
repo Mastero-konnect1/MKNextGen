@@ -4,7 +4,7 @@
     justify-content: center;
     text-align: center;
     max-width: 1500px;
-    height: 500px;
+    height: auto;
     margin: 0 auto;
     padding: 30px;
     border-radius: 8px;
@@ -66,64 +66,60 @@ h2 {
     border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .btn2:hover, .btn1:hover {
     background-color: #0056b3;
 }
 
-.back-button {
-    position: absolute;
-    top: 580px;
-    left: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.back-btn-p2 {
+    text-align: left;
+    margin-left: 140px;
 }
 
-.back-button:hover {
-    background-color: #0056b3;
+.back-btn-p2 p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.back-btn-p2 a {
+    color: #007bff;
+    text-decoration: none;
+}
+  
+.back-btn-p2 a:hover {
+    color: #0056b3;
 }
 
-/* Media queries for mobile view */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .container-p2 {
         flex-direction: column;
-        padding: 20px;
-        height: auto;
-        /* margin-top: 50px; */
+        /* padding: 10px; */
     }
 
-    /* .image-container-p2 {
-        margin: 20px 0;
-    } */
+    .image-container-p2 {
+        margin: 0;
+        text-align: center;
+    }
 
     .connect {
+        margin: 20px auto;
         width: 100%;
-        height: auto;
-        margin-left: 0;
+        max-width: 300px;
     }
 
     .content {
         margin: 0;
+        padding: 10px;
         width: 100%;
     }
 
-    /* .logo {
-        width: 40px;
-        height: auto;
-        margin-bottom: 5px;
-    } */
-
-    .back-button {
-        position: static;
-        margin: 20px 0;
-        margin-top: 120px;
+    .back-btn-p2{
+        text-align: left;
+        margin-left: 110px;
     }
+
 }

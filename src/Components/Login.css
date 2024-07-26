@@ -6,11 +6,9 @@
   height: auto;
   margin: 50px auto;
   padding: 30px;
-  /* border: 1px solid #ccc; */
   border-radius: 8px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   background-color: white;
-  /* margin-top: 100px; */
+  margin-top: 30px;
 }
 
 .image-container-l {
@@ -28,9 +26,7 @@
   flex: 2;
   max-width: 300px;
   padding: 20px 20px;
-  /* border: 1px solid #ccc; */
   border-radius: 10px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   background-color: #fff;
   margin-right: 200px;
 }
@@ -78,6 +74,12 @@
   margin-top: 20px;
 }
 
+.forgot-password p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
 .forgot-password a {
   color: #007bff;
   text-decoration: none;
@@ -103,20 +105,28 @@
   cursor: pointer;
 }
 
-.back-button {
-  position: absolute;
-  top: 580px;
-  left: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .container-l {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-.back-button:hover {
-  background-color: #0056b3;
+  .image-container-l {
+    margin: 0;
+    text-align: center;
+  }
+
+  .login-image {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .login-container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 400px;
+    /* padding: 20px; */
+  }
 }

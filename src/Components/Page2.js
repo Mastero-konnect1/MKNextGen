@@ -27,12 +27,6 @@ function Page2() {
 
   return (
     <div>
-      <div className="header">
-        <button className="back-button" onClick={handleBack}>
-          &#8592; Back
-        </button>
-        {/* <img src={logo} alt="Logo" className="logo" /> */}
-      </div>
       {!showSignup && !showLogin && !showPage1 ? (
         <div className="container-p2">
           <div className="image-container-p2">
@@ -44,6 +38,11 @@ function Page2() {
               <button className="btn1" onClick={navigateToLogin}>Login</button>
               <br />
               <button className="btn2" onClick={navigateToSignup}>Sign Up</button>
+
+              <div className='back-btn-p2'>
+              <p> <a href="#home" onClick={handleBack}>&#8592;</a> </p>
+              </div> 
+              
             </div>
           </div>
         </div>
