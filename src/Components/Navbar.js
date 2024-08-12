@@ -1,13 +1,13 @@
 import React from 'react';
 import './Navbar.css';
-import logoo from './Images/nav.png'; // Ensure you have a logo image in your project
+import logo from './Images/nav.png'; // Ensure you have a logo image in your project
 
 const Navbar = () => {
   return (
     <nav className="navbar-n">
       <div className="navbar-left">
         <a href="/#" className="logo-n">
-          <img src={logoo} alt="Logo" className="logo-img-n" />
+          <img src={logo} alt="Logo" className="logo-img-n" />
         </a>
       </div>
       <div className="navbar-right">

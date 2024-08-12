@@ -13,7 +13,10 @@
 }
 
 .logo-img-n {
-    width: 60px; /* Adjust size as needed */
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 50px; /* Adjust size as needed */
     height: 60px;
 }
 

@@ -1,58 +1,130 @@
 .container {
-    max-width: 1200px; /* Adjust to your desired maximum width */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Adjust padding as needed */
-  }
-  
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro {
+  flex: 1;
+  max-width: 50%; 
+  padding-right: 20px;
+}
+
+.intro h2 {
+  color: blue; 
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333; 
+}
+
+.intro h3 {
+  color: green; /* or any color you prefer */
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.intro h3 a {
+  color: green; /* or any color you prefer */
+  text-decoration: none; /* Remove underline */
+}
+
+.intro h3 a:hover {
+  text-decoration: none; /* Add underline on hover */
+  color: rgb(110, 245, 110);
+}
+
+
+
+.image {
+  flex: 1;
+  max-width: 50%;
+  margin-left: 10%; 
+}
+
+.home-image {
+  width: 500px; 
+  height: 500px; 
+  border-radius: 8px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .homepage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .intro {
-    flex: 1;
-    max-width: 50%; /* Adjust as needed */
-    padding-right: 20px;
-  }
-  
-  .intro h2 {
-    color: blue; /* Primary color */
-    margin-bottom: 10px;
-  }
-  
-  .intro p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333; /* Dark text color */
-  }
-  
-  .image {
-    flex: 1;
-    max-width: 50%;
-    margin-left: 10%; /* Adjust as needed */
-  }
-  
-  .home-image {
-    width: 500px; /* Responsive width */
-    height: 500px; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: rounded corners */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .homepage {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .intro, .image {
+  }
+
+  .intro, .image {
       max-width: 100%;
       padding: 10px;
-    }
-  
-    .intro {
-      text-align: center;
-    }
   }
-  
+
+  .intro {
+      text-align: center;
+  }
+}
+
+
+.additional-section {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.additional-section h2 {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.additional-section p {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 20px; /* Space below the question */
+}
+
+.slider {
+  width: 60%;
+  margin: 20px 0;
+}
+
+.rating-value {
+  margin-bottom: 20px; /* Space below the rating value */
+  font-size: 1.2rem;
+  color: black;
+}
+
+.assessment-textarea {
+  width: 50%;
+  height: 100px; /* Adjust height as needed */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px; /* Space below the textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-button-h {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff; /* Blue color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button-h:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

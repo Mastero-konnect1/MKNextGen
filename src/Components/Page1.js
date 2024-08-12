@@ -1,19 +1,19 @@
-import React, { useState } from 'react'; // Uses useState hook to manage showPage2 state
-import './Page1.css'; // Import CSS page
-import logo from './Images/Logo2.png'; // Path of the logo or image
-import pic1 from './Images/Pic1.png'; // Import Pic1.png
+import React, { useState } from 'react';
+import './Page1.css'; 
+import logo12 from './Images/Logo2.png';
+import pic1 from './Images/Pic1.png';
 import Page2 from './Page2';
 
 function Page1() {
-  const [showPage2, setShowPage2] = useState(false); // Dynamically rendering Page2.js based on a state or a condition
+  const [showPage2, setShowPage2] = useState(false);
   
   const navigateToPage2 = () => {
-    setShowPage2(true); // Page2.js renders its content when showPage2 state is set to true
+    setShowPage2(true);
   };
 
   return (
     <div>
-      <img src={logo} alt="Logo" className="logo-p1" />
+      <img src={logo12} alt="Logo" className="logo-p1" />
       {!showPage2 ? (
         <div className="container-p1">
           <div className="image-container-p1">

@@ -1,4 +1,6 @@
 import "./App.css";
+// import TestAnalysis from "./Components/TestAnalysis";
+// import HomePage from "./Components/HomePage";
 // import ForgotPassword from "./Components/ForgotPassword";
 // import Login from './Components/Login';
 // import SignUp from './Components/Signup';
@@ -13,6 +15,8 @@ function App() {
       {/* <SignUp /> */}
       {/* <Login /> */}
       {/* <ForgotPassword /> */}
+      {/* <HomePage /> */}
+      {/* <TestAnalysis /> */}
     </>
   );
 }
