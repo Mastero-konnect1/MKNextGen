@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './HomePage.css';
+import './css/HomePage.css';
 import exampleImage from './Images/home.jpg'; 
 import Navbar from './Navbar';
+// Import the MentorList component
+import MentorList from './MentorList';
 
 const HomePage = () => {
   const [rating, setRating] = useState(5); // Default rating value
@@ -11,6 +13,7 @@ const HomePage = () => {
   const [submittedFirst, setSubmittedFirst] = useState(false);
   const [submittedSecond, setSubmittedSecond] = useState(false);
   const [submittedThird, setSubmittedThird] = useState(false);
+  const [navigateToMentorList, setNavigateToMentorList] = useState(false); // To handle the navigation to MentorList
 
   const handleSubmitFirstQuestion = () => {
     setSubmittedFirst(true);
@@ -26,7 +29,13 @@ const HomePage = () => {
 
   const handleSubmitFourthQuestion = () => {
     alert(`First Rating: ${rating}\nGoals: ${goals}\nLacking Skills: ${skills}\nGuidance: ${guidance}`);
+    // Set state to navigate to the MentorList component
+    setNavigateToMentorList(true);
   };
+
+  if (navigateToMentorList) {
+    return <MentorList />; // Navigate to the MentorList page by rendering the component
+  }
 
   return (
     <div>
@@ -50,7 +59,7 @@ const HomePage = () => {
         {/* Assessment Section */}
         <div id="assessment-section" className="additional-section">
           <h2>Assessment</h2>
-          <p>How would you rate your current level of exposure to your desired industry?</p>
+          <p>1. How would you rate your current level of exposure to your desired industry?</p>
           <input
             type="range"
             min="1"
@@ -67,7 +76,7 @@ const HomePage = () => {
           
           {submittedFirst && (
             <>
-              <p>What are your primary goals for professional development?</p>
+              <p>2. What are your primary goals for professional development?</p>
               <textarea
                 placeholder="Enter your goals here"
                 value={goals}
@@ -82,7 +91,7 @@ const HomePage = () => {
 
           {submittedFirst && submittedSecond && (
             <>
-              <p>What skills do you feel are most lacking for success in your desired industry?</p>
+              <p>3. What skills do you feel are most lacking for success in your desired industry?</p>
               <textarea
                 placeholder="Enter the skills you lack here"
                 value={skills}
@@ -97,7 +106,7 @@ const HomePage = () => {
 
           {submittedFirst && submittedSecond && submittedThird && (
             <>
-              <p>What type of guidance would be most helpful from a mentor?</p>
+              <p>4. What type of guidance would be most helpful from a mentor?</p>
               <textarea
                 placeholder="Enter the type of guidance here"
                 value={guidance}

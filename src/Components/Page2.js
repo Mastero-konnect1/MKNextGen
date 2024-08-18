@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Page2.css'; // Import CSS page
+import './css/Page2.css'; // Import CSS page
 // import logo from './Logo2.png'; // Path of the logo or image
 import connect from './Images/connect.jpg'; // Import connect.png
 import SignUp from './Signup';

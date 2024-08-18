@@ -1,5 +1,5 @@
 import "./App.css";
-// import TestAnalysis from "./Components/TestAnalysis";
+// import MentorList from "./Components/MentorList";
 // import HomePage from "./Components/HomePage";
 // import ForgotPassword from "./Components/ForgotPassword";
 // import Login from './Components/Login';
@@ -16,7 +16,7 @@ function App() {
       {/* <Login /> */}
       {/* <ForgotPassword /> */}
       {/* <HomePage /> */}
-      {/* <TestAnalysis /> */}
+      {/* <MentorList /> */}
     </>
   );
 }
